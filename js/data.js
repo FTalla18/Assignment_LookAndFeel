@@ -13,37 +13,37 @@ const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "
 const DESTINATIONS = [
   {
     id: "tromso", name: "Tromsø", country: "Norway", lat: 69.65, lng: 18.96,
-    img: "img/tromso.svg",
+    img: "img/tromso.jpg",
     blurb: "A lively Arctic city on a fjord, right under the auroral oval. Whale season overlaps with the darkest weeks.",
     temps: [-4, -4, -3, 1, 5, 9, 12, 11, 8, 3, 0, -2]
   },
   {
     id: "rovaniemi", name: "Rovaniemi", country: "Finland", lat: 66.50, lng: 25.73,
-    img: "img/rovaniemi.svg",
+    img: "img/rovaniemi.jpg",
     blurb: "Finnish Lapland on the Arctic Circle: glass igloos, husky trails and deep, still forest cold.",
     temps: [-12, -11, -7, -1, 6, 12, 15, 12, 7, 1, -4, -9]
   },
   {
     id: "iceland", name: "South Iceland", country: "Iceland", lat: 63.99, lng: -19.02,
-    img: "img/iceland.svg",
+    img: "img/iceland.jpg",
     blurb: "Black-sand beaches, ice caves and hot springs. Mild for its latitude and a five-hour flight from Florida hubs.",
     temps: [0, 0, 1, 3, 6, 9, 11, 11, 8, 5, 2, 0]
   },
   {
     id: "svalbard", name: "Svalbard", country: "Norway", lat: 78.22, lng: 15.65,
-    img: "img/svalbard.svg",
+    img: "img/svalbard.jpg",
     blurb: "The northernmost town on Earth. Weeks of polar night in winter, polar bears and midnight sun in summer.",
     temps: [-13, -13, -13, -9, -3, 3, 7, 6, 2, -4, -8, -10]
   },
   {
     id: "greenland", name: "Ilulissat", country: "Greenland", lat: 69.22, lng: -51.10,
-    img: "img/greenland.svg",
+    img: "img/greenland.jpg",
     blurb: "A UNESCO icefjord where city-sized icebergs drift past colorful houses. Quiet, remote and unforgettable.",
     temps: [-13, -14, -13, -7, 0, 5, 8, 7, 3, -3, -7, -11]
   },
   {
     id: "antarctica", name: "Antarctic Peninsula", country: "Antarctica", lat: -64.77, lng: -64.05,
-    img: "img/antarctica.svg",
+    img: "img/antarctica.jpg",
     blurb: "The seventh continent by expedition ship from Ushuaia. Penguin colonies, glaciers and near-endless daylight.",
     temps: [2, 2, 1, -1, -3, -5, -6, -6, -5, -3, -1, 1]
   }
