@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frost Travel | Aurora and polar trips timed to the dark</title>
+  <meta name="description" content="Frost Travel plans aurora and polar trips around real darkness hours, season and weather. Tromsø, Lapland, Iceland, Svalbard, Greenland and Antarctica.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <!-- Fonts: preconnect first so the font files start downloading early -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Header: identical on every page, only aria-current changes ===== -->
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main">
+      <a class="brand" href="index.html"><img src="img/favicon.svg" alt="" width="34" height="34">Frost Travel</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links"><span class="bars"></span><span class="visually-hidden">Menu</span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="managebookings.html">Manage bookings</a></li>
+        <li><a href="analytics.html">Analytics</a></li>
+        <li><a class="btn btn-primary btn-small" href="index.html#finder">Find a trip</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero: inline SVG so the aurora can be animated with CSS ===== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <svg class="hero-sky" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="curtain" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#5ef2c2" stop-opacity=".95"/>
+            <stop offset=".5" stop-color="#43d6b0" stop-opacity=".35"/>
+            <stop offset="1" stop-color="#9b7bff" stop-opacity="0"/>
+          </linearGradient>
+          <filter id="glow" x="-10%" y="-50%" width="120%" height="200%"><feGaussianBlur stdDeviation="22"/></filter>
+        </defs>
+        <g fill="#fff"><circle cx="466" cy="72" r="0.7" opacity="0.34"/><circle cx="772" cy="176" r="0.7" opacity="0.85"/><circle cx="309" cy="41" r="1.5" opacity="0.34"/><circle cx="131" cy="204" r="0.7" opacity="0.87"/><circle cx="908" cy="280" r="0.7" opacity="0.65"/><circle cx="571" cy="469" r="0.7" opacity="0.63"/><circle cx="192" cy="201" r="0.7" opacity="0.64"/><circle cx="807" cy="327" r="0.7" opacity="0.65"/><circle cx="920" cy="179" r="0.7" opacity="0.64"/><circle cx="891" cy="238" r="1.5" opacity="0.77"/><circle cx="670" cy="443" r="1.2" opacity="0.48"/><circle cx="1144" cy="336" r="0.9" opacity="0.35"/><circle cx="432" cy="238" r="1.2" opacity="0.74"/><circle cx="415" cy="470" r="0.7" opacity="0.61"/><circle cx="238" cy="164" r="1.5" opacity="0.55"/><circle cx="1385" cy="37" r="1.2" opacity="0.50"/><circle cx="504" cy="238" r="1.5" opacity="0.34"/><circle cx="135" cy="130" r="0.7" opacity="0.34"/><circle cx="1010" cy="311" r="1.5" opacity="0.47"/><circle cx="556" cy="321" r="0.7" opacity="0.86"/><circle cx="512" cy="293" r="1.5" opacity="0.34"/><circle cx="1106" cy="62" r="0.9" opacity="0.54"/><circle cx="1320" cy="238" r="0.9" opacity="0.57"/><circle cx="791" cy="424" r="1.5" opacity="0.82"/><circle cx="401" cy="199" r="1.2" opacity="0.71"/><circle cx="548" cy="111" r="0.7" opacity="0.41"/><circle cx="334" cy="112" r="1.5" opacity="0.80"/><circle cx="263" cy="135" r="0.9" opacity="0.55"/><circle cx="532" cy="272" r="0.9" opacity="0.71"/><circle cx="742" cy="296" r="0.7" opacity="0.57"/><circle cx="1254" cy="457" r="1.5" opacity="0.54"/><circle cx="568" cy="231" r="1.5" opacity="0.34"/><circle cx="97" cy="100" r="0.9" opacity="0.37"/><circle cx="865" cy="49" r="0.9" opacity="0.62"/><circle cx="1366" cy="295" r="0.7" opacity="0.82"/><circle cx="884" cy="71" r="1.2" opacity="0.87"/><circle cx="867" cy="228" r="0.7" opacity="0.81"/><circle cx="1430" cy="224" r="1.5" opacity="0.49"/><circle cx="208" cy="360" r="1.2" opacity="0.59"/><circle cx="997" cy="248" r="0.9" opacity="0.87"/><circle cx="761" cy="70" r="0.7" opacity="0.75"/><circle cx="429" cy="309" r="0.7" opacity="0.72"/><circle cx="376" cy="176" r="0.9" opacity="0.51"/><circle cx="321" cy="260" r="1.2" opacity="0.68"/><circle cx="883" cy="378" r="0.9" opacity="0.78"/><circle cx="1178" cy="355" r="0.9" opacity="0.42"/><circle cx="710" cy="351" r="0.7" opacity="0.77"/><circle cx="680" cy="93" r="1.2" opacity="0.57"/><circle cx="1349" cy="474" r="1.2" opacity="0.35"/><circle cx="147" cy="226" r="1.2" opacity="0.42"/><circle cx="899" cy="432" r="0.7" opacity="0.59"/><circle cx="940" cy="384" r="0.7" opacity="0.80"/><circle cx="173" cy="186" r="0.9" opacity="0.59"/><circle cx="257" cy="379" r="1.2" opacity="0.35"/><circle cx="1362" cy="346" r="1.5" opacity="0.54"/><circle cx="1363" cy="348" r="0.9" opacity="0.90"/><circle cx="40" cy="284" r="1.5" opacity="0.78"/><circle cx="210" cy="397" r="1.5" opacity="0.69"/><circle cx="505" cy="263" r="0.9" opacity="0.31"/><circle cx="1151" cy="349" r="0.7" opacity="0.62"/><circle cx="1344" cy="208" r="0.9" opacity="0.80"/><circle cx="304" cy="121" r="1.2" opacity="0.60"/><circle cx="1100" cy="156" r="1.5" opacity="0.80"/><circle cx="88" cy="355" r="1.5" opacity="0.70"/><circle cx="1174" cy="248" r="0.9" opacity="0.62"/><circle cx="754" cy="9" r="1.5" opacity="0.77"/><circle cx="876" cy="372" r="0.9" opacity="0.40"/><circle cx="682" cy="348" r="0.7" opacity="0.50"/><circle cx="746" cy="267" r="0.7" opacity="0.83"/><circle cx="82" cy="92" r="0.7" opacity="0.76"/><circle cx="731" cy="270" r="0.7" opacity="0.57"/><circle cx="882" cy="243" r="0.9" opacity="0.72"/><circle cx="651" cy="256" r="1.5" opacity="0.60"/><circle cx="357" cy="251" r="1.2" opacity="0.85"/><circle cx="1286" cy="97" r="1.5" opacity="0.38"/><circle cx="175" cy="212" r="0.7" opacity="0.70"/><circle cx="617" cy="102" r="1.2" opacity="0.77"/><circle cx="1292" cy="74" r="1.2" opacity="0.39"/><circle cx="1271" cy="464" r="0.9" opacity="0.75"/><circle cx="136" cy="425" r="0.9" opacity="0.89"/><circle cx="1199" cy="78" r="1.5" opacity="0.90"/><circle cx="581" cy="202" r="1.2" opacity="0.49"/><circle cx="1040" cy="9" r="1.5" opacity="0.56"/><circle cx="26" cy="159" r="1.2" opacity="0.61"/><circle cx="93" cy="473" r="0.9" opacity="0.88"/><circle cx="151" cy="127" r="0.7" opacity="0.84"/><circle cx="261" cy="363" r="1.5" opacity="0.81"/><circle cx="973" cy="454" r="1.5" opacity="0.39"/><circle cx="1324" cy="274" r="1.2" opacity="0.35"/><circle cx="83" cy="330" r="1.5" opacity="0.84"/><circle cx="387" cy="8" r="0.7" opacity="0.78"/><circle cx="121" cy="411" r="0.7" opacity="0.46"/><circle cx="175" cy="6" r="1.5" opacity="0.86"/><circle cx="386" cy="62" r="0.9" opacity="0.86"/><circle cx="1396" cy="126" r="0.9" opacity="0.42"/><circle cx="449" cy="146" r="0.9" opacity="0.47"/><circle cx="720" cy="85" r="1.2" opacity="0.78"/><circle cx="1432" cy="18" r="0.7" opacity="0.74"/><circle cx="794" cy="91" r="1.5" opacity="0.45"/><circle cx="644" cy="316" r="1.5" opacity="0.69"/><circle cx="786" cy="427" r="1.2" opacity="0.71"/><circle cx="1415" cy="164" r="0.9" opacity="0.54"/><circle cx="500" cy="26" r="0.9" opacity="0.31"/><circle cx="901" cy="422" r="1.5" opacity="0.40"/><circle cx="122" cy="404" r="1.2" opacity="0.66"/><circle cx="997" cy="22" r="0.9" opacity="0.39"/><circle cx="642" cy="126" r="1.2" opacity="0.88"/><circle cx="788" cy="117" r="1.2" opacity="0.43"/><circle cx="263" cy="161" r="0.7" opacity="0.58"/><circle cx="724" cy="96" r="0.7" opacity="0.35"/></g>
+        <g filter="url(#glow)">
+          <path class="curtain" fill="url(#curtain)" d="M-100 330 C 200 120 480 360 760 220 S 1200 120 1540 260 L 1540 420 C 1200 300 1000 460 720 380 S 200 470 -100 460 Z"/>
+          <path class="curtain two" fill="url(#curtain)" opacity=".6" d="M-100 250 C 300 380 560 150 880 260 S 1300 330 1540 180 L 1540 280 C 1300 400 1060 250 860 330 S 300 440 -100 360 Z"/>
+        </g>
+        <polygon fill="#0f2a40" points="0,640 60,540 121,608 197,545 273,635 372,430 471,629 563,487 655,621 741,511 828,630 933,407 1038,615 1087,547 1136,612 1235,439 1333,613 1436,491 1538,622 1440,800 0,800"/>
+        <polygon fill="#081a2a" points="0,700 75,619 150,689 239,606 328,668 378,647 429,674 521,633 613,681 705,652 798,693 851,668 905,674 1001,626 1097,689 1157,585 1217,672 1321,619 1425,671 1483,627 1541,693 1440,800 0,800"/>
+      </svg>
+
+      <div class="hero-inner wrap">
+        <div>
+          <h1 id="hero-title">Trips timed to the dark.</h1>
+          <p>Frost Travel is a Sarasota-based agency for aurora and polar trips. We schedule every departure around real darkness hours, season and weather, so your nights up north count.</p>
+          <div class="hero-actions">
+            <a class="btn btn-aurora" href="#finder">Find my trip</a>
+            <a class="btn btn-outline-light" href="analytics.html">See the data</a>
+          </div>
+        </div>
+
+        <!-- Filled in by js/home.js using the darkHours() formula -->
+        <aside class="tonight" aria-labelledby="tonight-title">
+          <h2 id="tonight-title">Dark sky tonight</h2>
+          <p id="tonight-date">Hours with the sun at least 12° below the horizon.</p>
+          <table><tbody id="tonight-rows"></tbody></table>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== Destinations ===== -->
+    <section class="block wrap" id="destinations" aria-labelledby="dest-title">
+      <div class="block-head">
+        <h2 id="dest-title">Six places where the cold is the point</h2>
+        <p>Each chosen for dark skies, wildlife or ice, and reachable from Tampa or Orlando in one or two connections.</p>
+      </div>
+      <div class="dest-grid">
+        <a class="dest feature" href="#finder" data-dest="tromso">
+          <div class="dest-media"><img src="img/tromso.svg" alt="Green aurora above mountains and a still fjord" width="800" height="560"></div>
+          <h3>Tromsø</h3>
+          <div class="where">Norway, 69.6° N</div>
+          <p>A lively Arctic city on a fjord, right under the auroral oval. Whale season overlaps with the darkest weeks, so one trip can cover both.</p>
+          <span class="season">Aurora season September to March</span>
+        </a>
+        <a class="dest" href="#finder" data-dest="rovaniemi">
+          <div class="dest-media"><img src="img/rovaniemi.svg" alt="A lit glass igloo among pine trees under the aurora" width="800" height="560" loading="lazy"></div>
+          <h3>Rovaniemi</h3>
+          <div class="where">Finland, 66.5° N</div>
+          <span class="season">Glass igloos December to March</span>
+        </a>
+        <a class="dest" href="#finder" data-dest="iceland">
+          <div class="dest-media"><img src="img/iceland.svg" alt="Aurora over a black-sand beach scattered with ice" width="800" height="560" loading="lazy"></div>
+          <h3>South Iceland</h3>
+          <div class="where">Iceland, 64.0° N</div>
+          <span class="season">Ice caves November to March</span>
+        </a>
+        <a class="dest" href="#finder" data-dest="svalbard">
+          <div class="dest-media"><img src="img/svalbard.svg" alt="Snowy glacier and peaks in blue polar night" width="800" height="560" loading="lazy"></div>
+          <h3>Svalbard</h3>
+          <div class="where">Norway, 78.2° N</div>
+          <span class="season">Polar night Nov to Jan, bears Jun to Aug</span>
+        </a>
+        <a class="dest" href="#finder" data-dest="greenland">
+          <div class="dest-media"><img src="img/greenland.svg" alt="Pastel icebergs drifting in a dusk-lit fjord" width="800" height="560" loading="lazy"></div>
+          <h3>Ilulissat</h3>
+          <div class="where">Greenland, 69.2° N</div>
+          <span class="season">Icebergs all year, aurora Sep to Mar</span>
+        </a>
+        <a class="dest" href="#finder" data-dest="antarctica">
+          <div class="dest-media"><img src="img/antarctica.svg" alt="Expedition ship among icebergs below white mountains" width="800" height="560" loading="lazy"></div>
+          <h3>Antarctic Peninsula</h3>
+          <div class="where">Antarctica, 64.8° S</div>
+          <span class="season">Expedition season November to March</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== Trip finder: the useful, data-driven part of the home page ===== -->
+    <section class="finder block" id="finder" aria-labelledby="finder-title">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 id="finder-title">Find a trip that fits your dates</h2>
+          <p>Pick a month and we rank every departure by how many hours of dark sky you'll get.</p>
+        </div>
+
+        <form class="finder-controls" id="finder-form" onsubmit="return false">
+          <div class="field">
+            <label for="f-month">Travel month</label>
+            <select id="f-month"></select>
+          </div>
+          <fieldset class="seg seg-wrap">
+            <legend>Trip style</legend>
+            <input type="radio" name="style" id="s-all" value="All" checked><label for="s-all">All</label>
+            <input type="radio" name="style" id="s-aurora" value="Aurora"><label for="s-aurora">Aurora</label>
+            <input type="radio" name="style" id="s-wild" value="Wildlife"><label for="s-wild">Wildlife</label>
+            <input type="radio" name="style" id="s-adv" value="Adventure"><label for="s-adv">Adventure</label>
+            <input type="radio" name="style" id="s-exp" value="Expedition"><label for="s-exp">Expedition</label>
+          </fieldset>
+          <div class="field">
+            <label for="f-budget">Budget per person: <span class="budget-out" id="budget-out">$16,000</span></label>
+            <input type="range" id="f-budget" min="2000" max="16000" step="500" value="16000">
+          </div>
+        </form>
+
+        <p class="result-meta" id="result-meta" aria-live="polite"></p>
+        <ul class="board" id="board"></ul>
+      </div>
+    </section>
+
+    <!-- ===== How it works (a real sequence, so it is numbered) ===== -->
+    <section class="block wrap" aria-labelledby="how-title">
+      <div class="block-head"><h2 id="how-title">How we plan your trip</h2></div>
+      <ol class="steps">
+        <li>
+          <h3>Pick your window</h3>
+          <p>Tell us when you can travel. We show how dark each destination is that month and what the weather usually does.</p>
+        </li>
+        <li>
+          <h3>We watch the forecast</h3>
+          <p>In the week before you leave, we track aurora and cloud forecasts and move your night excursions to the clearest evenings.</p>
+        </li>
+        <li>
+          <h3>Go out when the sky opens</h3>
+          <p>Guides drive to clear skies, sometimes two hours away. If you see no aurora on an aurora trip, your next trip is 20% off.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="band block" aria-labelledby="band-title">
+      <div class="band-inner wrap">
+        <div>
+          <h2 id="band-title">Flying from Florida?</h2>
+          <p>We book routings from Tampa, Sarasota and Orlando, rent the heavy parkas for you, and send a packing list written for people who own more sandals than boots.</p>
+        </div>
+        <div class="band-actions">
+          <a class="btn btn-aurora" href="#finder">Plan a trip</a>
+          <a class="btn btn-outline-light" href="mailto:hello@frosttravel.example">Email an advisor</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer: identical on every page ===== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html"><img src="img/favicon.svg" alt="" width="34" height="34">Frost Travel</a>
+          <p>Aurora and polar trips, planned around the dark. A student project by Freeman Talla for ISM 6225 at the University of South Florida. Trips and prices are fictional.</p>
+        </div>
+        <div>
+          <h2>Pages</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="managebookings.html">Manage bookings</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Project</h2>
+          <ul>
+            <li><a href="https://github.com/FTalla18/Assignment_LookAndFeel">Source code on GitHub</a></li>
+            <li><a href="https://github.com/FTalla18">Freeman on GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/freeman-talla">Freeman on LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Frost Travel (demo)</span>
+        <span>Sarasota, Florida</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts at the end + defer: the page renders before any JS runs -->
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/home.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analytics | Frost Travel</title>
+  <meta name="description" content="Darkness hours, temperatures and tourism data that guide when to travel to the Arctic and Antarctica.">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <!-- Fonts: preconnect first so the font files start downloading early -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ===== Header: identical on every page, only aria-current changes ===== -->
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main">
+      <a class="brand" href="index.html"><img src="img/favicon.svg" alt="" width="34" height="34">Frost Travel</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links"><span class="bars"></span><span class="visually-hidden">Menu</span></button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About us</a></li>
+        <li><a href="managebookings.html">Manage bookings</a></li>
+        <li><a href="analytics.html" aria-current="page">Analytics</a></li>
+        <li><a class="btn btn-primary btn-small" href="index.html#finder">Find a trip</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-head wrap">
+      <h1>When to go, in numbers</h1>
+      <p class="lede">The data we use to plan every Frost Travel departure: how dark the sky gets, how cold it is, and when the crowds arrive.</p>
+    </section>
+
+    <section class="wrap" style="padding-bottom:5rem">
+      <div class="kpis" aria-label="Key figures">
+        <div class="kpi"><b id="kpi-svalbard">&nbsp;</b><span>of dark sky per night in Svalbard in December</span></div>
+        <div class="kpi"><b>2.26M</b><span>foreign visitors to Iceland in 2024</span></div>
+        <div class="kpi"><b>122,072</b><span>visitors to Antarctica in the record 2023-24 season</span></div>
+        <div class="kpi"><b id="kpi-bookings">&nbsp;</b><span>active bookings in the <a href="managebookings.html">manage bookings</a> demo</span></div>
+      </div>
+
+      <div class="chart-row" style="margin-top:2.5rem">
+        <!-- Chart 1: darkness by month -->
+        <article class="chart-card wide">
+          <h2>Hours of dark sky per night, by month</h2>
+          <p class="note">Sun at least 12° below the horizon, calculated for the 15th of each month. Click a name in the legend to hide or show it.</p>
+          <div class="chart-box tall"><canvas id="chart-dark" role="img" aria-label="Line chart of dark hours per night by month for six destinations and Sarasota"></canvas></div>
+          <p class="takeaway">From April to August the sun never sinks far enough for a dark sky in Tromsø, so Sarasota actually gets more real night. That is why every aurora trip runs September to March. The Antarctic Peninsula is the mirror image: its tourist season falls in the southern summer, when darkness almost disappears.</p>
+        </article>
+
+        <!-- Chart 2: temperature vs darkness for one destination -->
+        <article class="chart-card wide">
+          <h2>Cold versus dark: pick your trade-off</h2>
+          <p class="note">Average temperature (bars) and dark hours (line) for one destination.</p>
+          <div class="chart-controls">
+            <div class="field">
+              <label for="dest-select">Destination</label>
+              <select id="dest-select"></select>
+            </div>
+            <fieldset class="seg">
+              <legend>Units</legend>
+              <input type="radio" name="unit" id="u-f" value="F" checked><label for="u-f">°F</label>
+              <input type="radio" name="unit" id="u-c" value="C"><label for="u-c">°C</label>
+            </fieldset>
+          </div>
+          <div class="chart-box"><canvas id="chart-temp" role="img" aria-label="Combined bar and line chart of temperature and dark hours by month"></canvas></div>
+          <p class="takeaway" id="temp-takeaway" aria-live="polite"></p>
+        </article>
+
+        <!-- Chart 3: Iceland seasonality -->
+        <article class="chart-card">
+          <h2>Iceland visitors by month</h2>
+          <p class="note">Foreign visitors departing Keflavík Airport, thousands, Oct 2023 to Sep 2024. Winter months highlighted.</p>
+          <div class="chart-box"><canvas id="chart-iceland" role="img" aria-label="Bar chart of monthly foreign visitors to Iceland"></canvas></div>
+          <p class="takeaway">January had 128,100 visitors against 281,500 in August: less than half the crowds, plus 14 hours of darkness instead of about one and a half.</p>
+        </article>
+
+        <!-- Chart 4: Antarctica growth -->
+        <article class="chart-card">
+          <h2>Antarctic Peninsula landings by season</h2>
+          <p class="note">Passengers on IAATO voyages that made landings. No tourism ran in 2020-21.</p>
+          <div class="chart-box"><canvas id="chart-antarctica" role="img" aria-label="Bar chart of Antarctic Peninsula landing passengers by season"></canvas></div>
+          <p class="takeaway">Landing passengers grew 76% between 2018-19 and 2024-25. Sites cap visitors at 100 ashore at a time, so popular departures sell out early.</p>
+        </article>
+
+        <!-- Chart 5: live data from the CRUD page -->
+        <article class="chart-card wide">
+          <h2>Our bookings by destination</h2>
+          <p class="note">Revenue per destination, live from the <a href="managebookings.html">manage bookings</a> page. Hover a bar to see traveler counts. Add or cancel a booking there and this chart changes. Cancelled bookings are excluded.</p>
+          <div class="chart-box"><canvas id="chart-bookings" role="img" aria-label="Bar chart of travelers and revenue by destination from the bookings demo"></canvas></div>
+          <p class="takeaway" id="bookings-takeaway" aria-live="polite"></p>
+        </article>
+      </div>
+
+      <section class="block" style="padding-bottom:0" aria-labelledby="sources-title">
+        <h2 id="sources-title" style="font-size:var(--step-1)">Sources and method</h2>
+        <ul class="sources">
+          <li>Iceland monthly visitors: <a href="https://ferdamalastofa.is/static/files/ferdamalastofa/talnaefni/ferdatjonusta-i-tolum/2024/okt/october-2024.pdf">Icelandic Tourist Board, Tourism in Iceland in figures, October 2024</a>. 2024 total: <a href="https://www.kefairport.com/news/passenger-numbers-increased">Keflavík Airport, 2024 passenger report</a>.</li>
+          <li>Antarctica: <a href="https://iaato.org/download/a-five-year-overview-and-2023-24-season-report-on-iaato-operator-use-of-antarctic-peninsula-landing-sites-and-atcm-visitor-site-guidelines-atcm46_ip104_e_">IAATO, ATCM 46 IP104</a> and <a href="https://iaato.org/download/iaato-overview-of-antarctic-vessel-tourism-the-2023-24-season-and-preliminary-estimates-for-2024-25-atcm46_ip102_rev1_e_">IAATO, ATCM 46 IP102</a>. The 2024-25 landing figure is IAATO's preliminary estimate.</li>
+          <li>Temperatures: approximate 1991–2020 monthly averages from national weather services, rounded to whole degrees.</li>
+          <li>Darkness hours: calculated in <code>js/data.js</code> from each destination's latitude using the standard solar declination formula.</li>
+          <li>Trips, prices and bookings are fictional and exist for this class project only.</li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <!-- ===== Footer: identical on every page ===== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="index.html"><img src="img/favicon.svg" alt="" width="34" height="34">Frost Travel</a>
+          <p>Aurora and polar trips, planned around the dark. A student project by Freeman Talla for ISM 6225 at the University of South Florida. Trips and prices are fictional.</p>
+        </div>
+        <div>
+          <h2>Pages</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="managebookings.html">Manage bookings</a></li>
+            <li><a href="analytics.html">Analytics</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Project</h2>
+          <ul>
+            <li><a href="https://github.com/FTalla18/Assignment_LookAndFeel">Source code on GitHub</a></li>
+            <li><a href="https://github.com/FTalla18">Freeman on GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/freeman-talla">Freeman on LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year">2026</span> Frost Travel (demo)</span>
+        <span>Sarasota, Florida</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts load with defer so the page renders first -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/analytics.js" defer></script>
+</body>
+</html>
